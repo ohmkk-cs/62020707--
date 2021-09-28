@@ -24,14 +24,14 @@ img3.setAttribute("src",randomImageSource3)
 // if num1 > num2 say Play 1 Wins!
 // if num2 > num1 say Play 2 Wins!
 // if num2 = num1 say Draw!
-if (num1 > num3 && num2 > num3 ) {
-    document.querySelector("h1").innerHTML = "Play 1 and Play2  Wins!"
+if (num1 > num3 && num1 > num2 ) {
+    document.querySelector("h1").innerHTML = "Play 1 Wins!"
 }
-else if (num1 > num2 && num3 > num2){
-    document.querySelector("h1").innerHTML = "Play 1 and Play3  Wins!"
+else if (num2 > num1 && num2 > num3){
+    document.querySelector("h1").innerHTML = "Play 2  Wins!"
 }
-else if (num2 > num1 && num3 > num1){
-    document.querySelector("h1").innerHTML = "Play 2 and Play3  Wins!"
+else if (num3 > num1 && num3 > num2){
+    document.querySelector("h1").innerHTML = "Play3  Wins!"
 }
 else if (num1 == num2 && num1 < num3){
     document.querySelector("h1").innerHTML = " Play3  Wins!"
@@ -42,6 +42,16 @@ else if (num3 == num2 && num3 < num1){
 else if (num3 == num1 && num3 < num2){
 document.querySelector("h1").innerHTML = " Play2  Wins!"
 }
+else if (num1 == num2 && num1 > num3){
+    document.querySelector("h1").innerHTML = " Play 1 and 2 Wins!"
+}
+else if (num3 == num2 && num3 > num1){
+    document.querySelector("h1").innerHTML = " Play 2 and 3 Wins!"
+}
+else if (num3 == num1 && num3 > num1){
+    document.querySelector("h1").innerHTML = " Play 1 and 3  Wins!"
+}
+
 else {
     document.querySelector("h1").innerHTML = "Draw!"
 }
